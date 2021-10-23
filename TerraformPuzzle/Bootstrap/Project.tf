@@ -1,6 +1,6 @@
 
 data "google_project" "stenio-techpuzzle-iac" {
-  project_id = var.project
+  project_id = var.project_id
 }
 
 /**

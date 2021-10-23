@@ -34,4 +34,11 @@ terraform init
 terraform apply
 ```
 
+4. To get list of assets execute
+```
+NOW=$(TZ=GMT date +"%Y-%m-%dT%H:%M:%SZ")
+
+gcloud beta asset list --project='[PROJECT_ID]' --snapshot-time=$NOW  --content-type='resource' --format='json' | jq .
+```
+
 Enjoy!
